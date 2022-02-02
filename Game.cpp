@@ -22,7 +22,6 @@ class Game{
   
 };
 
-Game* Game::instante = nullptr;
 
 Game* Game::GetInstance(){
     if(instance == nullptr){
