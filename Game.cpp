@@ -1,6 +1,9 @@
 #include <string>
 
 
+using namespace std;
+
+
 class Game{
   private:
     Game(string title, int width, int height);
