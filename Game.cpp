@@ -27,7 +27,7 @@ Game& Game::GetInstance(){
     if(instance == nullptr){
         instance = new Game();
     }
-    return (Game*)instance;
+    return *instance;
 }
 
 
