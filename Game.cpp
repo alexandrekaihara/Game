@@ -4,6 +4,11 @@
 using namespace std;
 
 
+string title = "Jogo do Pinguin";
+int width = 400;
+int height = 400;
+
+
 class Game{
   private:
     Game(string title, int width, int height);
@@ -24,7 +29,7 @@ class Game{
 
 Game& Game::GetInstance(){
     if(instance == nullptr){
-        instance = new Game();
+        instance = new Game(title, diwth, heght);
     }
     return *instance;
 }
