@@ -23,12 +23,13 @@ class Game{
 };
 
 
-Game* Game::GetInstance(){
+Game::GetInstance(){
     if(instance == nullptr){
         instance = new Game();
     }
     return instance;
 }
+
 
 int main(int argc, char* argv[]){
   
