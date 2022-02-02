@@ -29,7 +29,7 @@ class Game{
 
 Game& Game::GetInstance(){
     if(instance == nullptr){
-        instance = new Game(title, diwth, heght);
+        instance = new Game(title, width, height);
     }
     return *instance;
 }
