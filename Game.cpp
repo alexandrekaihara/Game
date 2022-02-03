@@ -1,9 +1,9 @@
+// Install SDL https://www.geeksforgeeks.org/sdl-library-in-c-c-with-examples/
+// Install o linux sudo apt-get install clang libsdl2-2.0-0 libsdl2-dbg libsdl2-dev libsdl2-image-2.0-0 libsdl2-image-dbg libsdl2-image-dev
 #include <iostream>
 #include <stdlib.h>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL_timer.h>
 #include "Game.h"
+#include "SDL.h"
 
 
 using namespace std;
