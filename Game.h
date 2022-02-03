@@ -18,7 +18,7 @@ Game::Game(){
     else{
         instance = this;
     }
-
+    
 }
 
 
