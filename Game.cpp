@@ -25,7 +25,7 @@ Game& Game::GetInstance(){
 Game::Game(string title, int width, int height){
     // Verifica se há uma instância, se existir exibe o erro
     if(instance != nullptr){
-        cout << "[ERROR] Already running an instance of Game\n"        
+        cout << "[ERROR] Already running an instance of Game\n";      
         exit(EXIT_FAILURE);
     }
     else{
