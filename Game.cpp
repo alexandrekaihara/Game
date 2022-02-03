@@ -31,7 +31,7 @@ Game* Game::instance = nullptr;
 
 Game& Game::GetInstance(){
     if(instance == nullptr){
-        return new Game(title, width, height);
+        return *(new Game(title, width, height));
     }
     return *instance;
 }
