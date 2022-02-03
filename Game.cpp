@@ -1,40 +1,20 @@
-#include <string>
-#include "Game.h"
+#include <iostream>
+#include <stdlib.h>
 
 
 using namespace std;
 
 
-string title = "Jogo do Pinguin";
-int width = 400;
-int height = 400;
-
-
-class Game{
-  private:
-    Game(string title, int width, int height);
-    static Game* instance;
-    //SDL_Window* window;
-    //SDL_Renderer* renderer;
-    //State& state;
-  public:
-    ~Game();
-    void run();
-    //SDL_Renderer* GetRenderer();
-    //State& GetState();
-    static Game& GetInstance();
-  protected:
-};
-
-
-Game* Game::instance = nullptr;
-
-
-Game& Game::GetInstance(){
-    if(instance == nullptr){
-        return *(new Game(title, width, height));
+Game::Game(){
+    // Verifica se há uma instância, se existir exibe o erro
+    if(instance != nullptr){
+        cout << "[ERROR] Already running an instance of Game\n"        
+        exit(EXIT_FAILURE);
     }
-    return *instance;
+    else{
+        instance = this;
+    }
+    
 }
 
 

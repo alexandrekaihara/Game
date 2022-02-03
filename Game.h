@@ -2,23 +2,45 @@
 #define GAME_H_INCLUDED
 
 
-#include <iostream>
-#include <stdlib.h>
+
+
+#include <string>
+#include "Game.h"
 
 
 using namespace std;
 
 
-Game::Game(){
-    // Verifica se há uma instância, se existir exibe o erro
-    if(instance != nullptr){
-        cout << "[ERROR] Already running an instance of Game\n"        
-        exit(EXIT_FAILURE);
+string title = "Jogo do Pinguin";
+int width = 400;
+int height = 400;
+
+
+class Game{
+  private:
+    Game(string title, int width, int height);
+    static Game* instance;
+    //SDL_Window* window;
+    //SDL_Renderer* renderer;
+    //State& state;
+  public:
+    ~Game();
+    void run();
+    //SDL_Renderer* GetRenderer();
+    //State& GetState();
+    static Game& GetInstance();
+  protected:
+};
+
+
+Game* Game::instance = nullptr;
+
+
+Game& Game::GetInstance(){
+    if(instance == nullptr){
+        return *(new Game(title, width, height));
     }
-    else{
-        instance = this;
-    }
-    
+    return *instance;
 }
 
 
